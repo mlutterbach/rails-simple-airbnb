@@ -1,0 +1,12 @@
+<h1><%= @flat.name %></h1>
+<h2><%= @flat.description %></h2>
+<h2><%= @flat.address %></h2>
+<h2><%= @flat.price_per_night %></h2>
+<h2><%= @flat.number_of_guests %></h2>
+
+  <div class="container d-flex justify-content-around w-75 p-3">
+    <%= link_to "Delete", flat_path(@flat), method: :delete,  data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+    <%# <%= link_to "Add a Review", new_flat_review_path(@flat), class: "btn btn-success" %>
+    <%= link_to "All Flats", flats_path, class: "btn btn-primary" %>
+    <%= link_to "Edit Flat", edit_flat_path, class: "btn btn-warning" %>
+  </div>
